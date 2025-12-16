@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>StanSpace - 追星大冒險</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom scrollbar for a playful look */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9; /* Slate-100 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #94a3b8; /* Slate-400 */
+        border-radius: 10px;
+      }
+      body {
+        background-color: #0f172a; /* Dark background outside phone */
+        color: #334155; /* Slate-700 text */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        min-height: 100dvh;
+      }
+      
+      /* Simulating iPhone 14 Dimensions (390x844) */
+      #root {
+        width: 100%;
+        max-width: 390px;
+        height: 100vh;
+        height: 100dvh;
+        background-color: #f8fafc; /* Slate-50 */
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 50px rgba(0,0,0,0.5);
+      }
+
+      /* Animation utils */
+      .animate-bounce-slight {
+        animation: bounce-slight 2s infinite;
+      }
+      @keyframes bounce-slight {
+        0%, 100% { transform: translateY(-5%); }
+        50% { transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.2s ease-out;
+      }
+      .animate-scale-up {
+        animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes scaleUp {
+        from { transform: scale(0.9); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

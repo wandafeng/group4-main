@@ -1,0 +1,8 @@
+{
+  "name": "StanSpace: 追星大冒險",
+  "description": "專為 K-Pop 粉絲打造的互動遊戲 APP。包含 AR 演唱會視野預覽、集章護照，以及 AI 智能小卡鑑定估價功能。",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
